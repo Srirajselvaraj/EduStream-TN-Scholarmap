@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased selection:bg-teal-100 selection:text-teal-900;
+  }
+}
+
+/* Print optimizations for Counsellor Advisory Reports */
+@media print {
+  nav, footer, .no-print, button {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-page {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    padding: 0 !important;
+  }
+}
